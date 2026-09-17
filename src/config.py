@@ -15,17 +15,10 @@ OPENROUTER_API_KEY = os.getenv(
 
 
 CHUNK_SIZE = 800
-
 CHUNK_OVERLAP = 150
-
 RETRIEVAL_K = 10
-
 RERANK_TOP_N = 4
 
-
-# ============================================================
-# Paths
-# ============================================================
 
 PDF_PATH = (
     "data/"

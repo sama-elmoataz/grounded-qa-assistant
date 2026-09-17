@@ -7,11 +7,6 @@ from src.config import (
     OPENROUTER_API_KEY,
 )
 
-
-# ============================================================
-# Create LLM
-# ============================================================
-
 def create_llm():
 
     llm = ChatOpenAI(
@@ -22,11 +17,6 @@ def create_llm():
     )
 
     return llm
-
-
-# ============================================================
-# Create Grounded Prompt
-# ============================================================
 
 def create_prompt():
 
@@ -75,10 +65,6 @@ Answer:
     return prompt
 
 
-# ============================================================
-# Format Retrieved Documents
-# ============================================================
-
 def format_documents(documents):
 
     formatted_documents = []
@@ -106,10 +92,6 @@ def format_documents(documents):
         formatted_documents
     )
 
-
-# ============================================================
-# Generate Answer
-# ============================================================
 
 def generate_answer(
     question,
@@ -140,10 +122,6 @@ def generate_answer(
 
     return answer
 
-
-# ============================================================
-# Get Source Pages
-# ============================================================
 
 def get_sources(documents):
 

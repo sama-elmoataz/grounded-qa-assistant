@@ -12,10 +12,6 @@ from src.config import (
 )
 
 
-# ============================================================
-# Load PDF
-# ============================================================
-
 def load_documents(pdf_path):
 
     loader = PyPDFLoader(pdf_path)
@@ -24,10 +20,6 @@ def load_documents(pdf_path):
 
     return documents
 
-
-# ============================================================
-# Split Documents
-# ============================================================
 
 def split_documents(documents):
 
@@ -42,11 +34,6 @@ def split_documents(documents):
 
     return chunks
 
-
-# ============================================================
-# Create Embeddings
-# ============================================================
-
 def create_embeddings():
 
     embeddings = HuggingFaceEmbeddings(
@@ -58,10 +45,6 @@ def create_embeddings():
 
     return embeddings
 
-
-# ============================================================
-# Build Vector Store
-# ============================================================
 
 def build_vectorstore(
     chunks,
@@ -76,20 +59,12 @@ def build_vectorstore(
     return vectorstore
 
 
-# ============================================================
-# Save Vector Store
-# ============================================================
-
 def save_vectorstore(vectorstore):
 
     vectorstore.save_local(
         VECTORSTORE_PATH
     )
 
-
-# ============================================================
-# Main Ingestion Pipeline
-# ============================================================
 
 def main():
 

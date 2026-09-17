@@ -8,10 +8,6 @@ from src.config import (
 )
 
 
-# ============================================================
-# Load Embeddings
-# ============================================================
-
 def load_embeddings():
 
     embeddings = HuggingFaceEmbeddings(
@@ -24,10 +20,6 @@ def load_embeddings():
     return embeddings
 
 
-# ============================================================
-# Load Vector Store
-# ============================================================
-
 def load_vectorstore(embeddings):
 
     vectorstore = FAISS.load_local(
@@ -39,9 +31,6 @@ def load_vectorstore(embeddings):
     return vectorstore
 
 
-# ============================================================
-# Retrieve Documents
-# ============================================================
 
 def retrieve_documents(
     query,
